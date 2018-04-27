@@ -1,6 +1,6 @@
 # Code Clone Checker
 
-WIP
+Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming source code.](https://github.com/kucherenko/jscpd), and post metrics to GitHub issue comment.
 
 ## Pull
 
