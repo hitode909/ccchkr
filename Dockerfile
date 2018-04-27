@@ -12,4 +12,15 @@ RUN set -x \
   && cd ../ \
   && rm jo-1.1.tar.gz
 
+
+RUN set -x \
+  && curl -s -LO "https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz" \
+  && tar -xvzf jq-1.5.tar.gz \
+  && cd jq-1.5 \
+  && ./configure \
+  && make \
+  && make install \
+  && cd ../ \
+  && rm jq-1.5.tar.gz
+
 ADD ccchkr.sh /usr/local/bin/ccchkr.sh

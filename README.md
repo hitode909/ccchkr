@@ -1,6 +1,6 @@
 # Code Clone Checker
 
-Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming source code.](https://github.com/kucherenko/jscpd), and post metrics to GitHub issue comment.
+Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming source code.](https://github.com/kucherenko/jscpd), and set the commit status.
 
 ## Pull
 
@@ -16,6 +16,13 @@ Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming s
 
 ## Run
 
+Set commit status as error when code duplication rate is larger than 1%.
+
 ```
-% docker run -it --rm --volume `pwd`:/src/:ro -e PERSONAL_ACCESS_TOKEN='***' -e COMMENT_API_ENDPOINT='https://github.***.com/api/v3/repos/:USER/:REPO/issues/:NUMBER/comments' hitode909/ccchkr ccchkr.sh --path src/ts/
+% docker run -it --rm \
+    --volume `pwd`:/src/:ro \
+    -e PERSONAL_ACCESS_TOKEN='***' \
+    -e COMMIT_ENDPOINT='https://github.***.com/api/v3/repos/:USER/:REPO/statuses/:COMMIT' \
+    -e LIMIT=1
+    hitode909/ccchkr ccchkr.sh --path src/ts/
 ```
