@@ -1,4 +1,7 @@
 #!/bin/sh
 set -e
 
-docker run -it --rm ccchkr ccchkr.sh $*
+source=$1
+shift
+
+docker run -it --rm --volume $source:/src/:ro -w /src/ ccchkr ccchkr.sh $*
