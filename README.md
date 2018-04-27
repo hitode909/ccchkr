@@ -4,19 +4,20 @@ Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming s
 
 ## Pull
 
+```
 % docker pull hitode909/ccchkr
+```
 
 ## Build
 
 ```
 % ./setup.sh
 % docker push hitode909/ccchkr
-```
-
+``
 
 ## Run
 
-Set commit status as error when code duplication rate is larger than 1%.
+Set commit status as error when code duplication rate of `src/ts/` is larger than 1%.
 
 ```
 % docker run -it --rm \
