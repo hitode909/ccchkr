@@ -1,0 +1,1 @@
+# Code Clone Checker
