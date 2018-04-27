@@ -1,4 +1,4 @@
 #!/bin/sh
 set -ex
 
-docker build -t ccchkr .
+docker build -t hitode909/ccchkr .
