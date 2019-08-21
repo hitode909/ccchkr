@@ -13,7 +13,7 @@ Detect code clones with [kucherenko/jscpd: Copy/paste detector for programming s
 ```
 % ./setup.sh
 % docker push hitode909/ccchkr
-``
+```
 
 ## Run
 
